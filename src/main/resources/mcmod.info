@@ -1,0 +1,18 @@
+[
+  {
+    "modid": "playerstats",
+    "name": "Playerstats",
+    "description": "New player stats",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+      "m1zark"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
