@@ -37,8 +37,6 @@ public class PixelmonListeners {
             }
         }
 
-        //data.getPokemonCaptured()[pokemon.getSpecies().getNationalPokedexInteger()]++;
-
         PixelmonStats.getInstance().getSql().updatePlayerData(p.getUniqueId(), data);
     }
 
@@ -52,7 +50,7 @@ public class PixelmonListeners {
 
             if(checkMega(pokemon)) data.setMegaDefeated(data.getMegaDefeated() + 1);
             if(pokemon.isBossPokemon() && !checkMega(pokemon)) data.setBossDefeated(data.getBossDefeated() + 1);
-            if(pokemon.getStoragePokemonData().isShiny() && !checkMega(pokemon)) data.setShinyCaptured(data.getShinyDefeated() + 1);
+            if(pokemon.getStoragePokemonData().isShiny() && !checkMega(pokemon)) data.setShinyDefeated(data.getShinyDefeated() + 1);
             if(pokemon.getSpecies().isLegendary() && !checkMega(pokemon)) data.setLegendDefeated(data.getLegendDefeated() + 1);
             if(pokemon.getSpecies().isUltraBeast()) data.setUltrabeastDefeated(data.getUltrabeastDefeated() + 1);
 
@@ -69,8 +67,6 @@ public class PixelmonListeners {
             catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
                 // empty catch block
             }
-
-            //data.getPokemonDefeated()[pokemon.getSpecies().getNationalPokedexInteger()]++;
 
             PixelmonStats.getInstance().getSql().updatePlayerData(p.getUniqueId(), data);
         }
