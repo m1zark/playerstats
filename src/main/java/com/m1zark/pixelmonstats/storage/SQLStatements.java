@@ -47,7 +47,7 @@ public abstract class SQLStatements {
                     if(!results.next()) {
                         try(PreparedStatement statement = connection.prepareStatement("INSERT INTO `" + this.mainTable + "` (PlayerUUID, Data) VALUES (?, ?)")) {
                             statement.setString(1, uuid.toString());
-                            statement.setString(2, gson.toJson(new PStats(uuid.toString(),0,0,0,0,0,0,0,0,0,new int[EnumSpecies.values().length + 1],new int[EnumSpecies.values().length + 1])));
+                            statement.setString(2, gson.toJson(new PStats(uuid.toString(),0,0,0,0,0,0,0,0,0,new int[891],new int[891])));
                             statement.executeUpdate();
                         }
                     }
@@ -75,7 +75,7 @@ public abstract class SQLStatements {
             try(ResultSet results = connection.prepareStatement("SELECT * FROM `" + this.mainTable + "` WHERE PlayerUUID='" + uuid + "'").executeQuery()) {
                 if (results.next()) return gson.fromJson(results.getString("Data"), PStats.class);
 
-                return new PStats(uuid.toString(),0,0,0,0,0,0,0,0,0,new int[EnumSpecies.values().length + 1],new int[EnumSpecies.values().length + 1]);
+                return new PStats(uuid.toString(),0,0,0,0,0,0,0,0,0,new int[891],new int[891]);
             }
         } catch (SQLException e) {
             e.printStackTrace();

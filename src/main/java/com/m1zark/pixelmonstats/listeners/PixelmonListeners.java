@@ -26,12 +26,11 @@ public class PixelmonListeners {
         if(EnumSpecies.ultrabeasts.contains(pokemon.getName())) data.setUltrabeastCaptured(data.getUltrabeastCaptured() + 1);
 
         try {
-            int[] temp = Arrays.copyOf(data.getPokemonCaptured(), EnumSpecies.values().length + 1);
+            int[] temp = Arrays.copyOf(data.getPokemonCaptured(), 891);
             int n = pokemon.getSpecies().getNationalPokedexInteger();
             temp[n] = temp[n] + 1;
             data.setPokemonCaptured(temp);
-        }
-        catch (ArrayIndexOutOfBoundsException | NullPointerException e) {
+        } catch (ArrayIndexOutOfBoundsException | NullPointerException e) {
             if (data.getPokemonCaptured() == null) {
                 // empty if block
             }
@@ -59,12 +58,11 @@ public class PixelmonListeners {
             }
 
             try {
-                int[] temp = Arrays.copyOf(data.getPokemonDefeated(), EnumSpecies.values().length + 1);
+                int[] temp = Arrays.copyOf(data.getPokemonDefeated(), 891);
                 int n = pokemon.getSpecies().getNationalPokedexInteger();
                 temp[n] = temp[n] + 1;
                 data.setPokemonDefeated(temp);
-            }
-            catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
+            } catch (ArrayIndexOutOfBoundsException | NullPointerException e) {
                 // empty catch block
             }
 
