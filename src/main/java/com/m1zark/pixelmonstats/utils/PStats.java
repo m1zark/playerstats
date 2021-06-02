@@ -17,8 +17,8 @@ public class PStats {
     private int legendDefeated = 0;
     private int ultrabeastCaptured = 0;
     private int ultrabeastDefeated = 0;
-    private int[] pokemonDefeated = new int[891];
-    private int[] pokemonCaptured = new int[891];
+    private int[] pokemonDefeated = new int[900];
+    private int[] pokemonCaptured = new int[900];
 
     public PStats(String id, int wildDefeated, int bossDefeated, int megaDefeated, int shinyDefeated, int shinyCaptured, int legendDefeated, int legendCaptured, int ultrabeastCaptured, int ultrabeastDefeated, int[] pokemonDefeated, int[] pokemonCaptured) {
         this.playerUUID = id;
