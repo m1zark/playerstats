@@ -26,7 +26,7 @@ public class PixelmonListeners {
         if(EnumSpecies.ultrabeasts.contains(pokemon.getName())) data.setUltrabeastCaptured(data.getUltrabeastCaptured() + 1);
 
         try {
-            int[] temp = Arrays.copyOf(data.getPokemonCaptured(), 900);
+            int[] temp = Arrays.copyOf(data.getPokemonCaptured(), 1000);
             int n = pokemon.getSpecies().getNationalPokedexInteger();
             temp[n] = temp[n] + 1;
             data.setPokemonCaptured(temp);
@@ -58,7 +58,7 @@ public class PixelmonListeners {
             }
 
             try {
-                int[] temp = Arrays.copyOf(data.getPokemonDefeated(), 900);
+                int[] temp = Arrays.copyOf(data.getPokemonDefeated(), 1000);
                 int n = pokemon.getSpecies().getNationalPokedexInteger();
                 temp[n] = temp[n] + 1;
                 data.setPokemonDefeated(temp);
